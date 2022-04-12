@@ -89,22 +89,23 @@ def image_projection(img):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
 
-    path = r'chess-board.png'
-    img = cv2.imread(path, 0)
-    img = image_projection(img)
-    img = Image.fromarray(img)
-    if img.mode != 'RGB':
-        img = img.convert('RGB')
-    img.save("perspective_img.jpg")
+    print("Starting")
+    # path = r'chess-board.png'
+    # img = cv2.imread(path, 0)
+    # img = image_projection(img)
+    # img = Image.fromarray(img)
+    # if img.mode != 'RGB':
+    #     img = img.convert('RGB')
+    # img.save("perspective_img.jpg")
 
-    path = r'perspective_img.jpg'
-    img = cv2.imread(path, 0)
-    img = image_rotation(img, deg=40)
-    img = Image.fromarray(img)
-    if img.mode != 'RGB':
-        img = img.convert('RGB')
-    img.save("rotated_img.jpg")
-
+    # path = r'perspective_img.jpg'
+    # img = cv2.imread(path, 0)
+    # img = image_rotation(img, deg=40)
+    # img = Image.fromarray(img)
+    # if img.mode != 'RGB':
+    #     img = img.convert('RGB')
+    # img.save("rotated_img.jpg")
+    #
     path = r'rotated_img.jpg'
     img = cv2.imread(path, 0)
     img = image_reflection(img)
